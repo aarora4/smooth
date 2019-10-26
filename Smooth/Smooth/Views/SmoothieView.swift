@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKShareKit
+import FacebookCore
 
 class SmoothieView: UIView, UIScrollViewDelegate {
     
@@ -92,6 +94,8 @@ class SmoothieView: UIView, UIScrollViewDelegate {
         shareButton.center.y = self.smoothieNameLabel.center.y
         self.addSubview(shareButton)
         
+        shareButton.addTarget(self, action: #selector(triggerNotification), for: .touchUpInside)
+        
         summaryIcon = UIButton(frame: CGRect(x: 10, y: 12, width: 30, height: 30))
         let summaryImage = UIImage(named: "head")?.withRenderingMode(.alwaysTemplate)
         summaryIcon.setImage(summaryImage, for: .normal)
@@ -160,6 +164,11 @@ class SmoothieView: UIView, UIScrollViewDelegate {
     func setCalories(calories: String) {
         self.totalCalories.text = "\(calories) + Calories"
     }
+    
+    @objc func triggerNotification() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "didPressShare"), object: nil, userInfo: nil)
+    }
+    
 
 }
 // Put this piece of code anywhere you like

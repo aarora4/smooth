@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,9 @@
 		8251BFCD2363DDE00047044E /* IngredientSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8251BFCC2363DDE00047044E /* IngredientSegmentView.swift */; };
 		8251BFCF2363E05D0047044E /* IngredientNutritionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8251BFCE2363E05D0047044E /* IngredientNutritionCard.swift */; };
 		8251BFD1236436320047044E /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8251BFD0236436320047044E /* ChartView.swift */; };
+		8251BFD523645F270047044E /* libFBSDKCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8251BFD423645F270047044E /* libFBSDKCoreKit.a */; };
+		8251BFD723645F270047044E /* libFBSDKLoginKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8251BFD623645F270047044E /* libFBSDKLoginKit.a */; };
+		8251BFD923645F270047044E /* libFBSDKShareKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8251BFD823645F270047044E /* libFBSDKShareKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		8251BFCC2363DDE00047044E /* IngredientSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSegmentView.swift; sourceTree = "<group>"; };
 		8251BFCE2363E05D0047044E /* IngredientNutritionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientNutritionCard.swift; sourceTree = "<group>"; };
 		8251BFD0236436320047044E /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChartView.swift; path = /Users/avi/Desktop/Smooth/Smooth/Smooth/ChartView.swift; sourceTree = "<absolute>"; };
+		8251BFD423645F270047044E /* libFBSDKCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFBSDKCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8251BFD623645F270047044E /* libFBSDKLoginKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFBSDKLoginKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8251BFD823645F270047044E /* libFBSDKShareKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFBSDKShareKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C914E9982BF9BDB7E23AEC9D /* Pods-Smooth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smooth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smooth/Pods-Smooth.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8251BFD523645F270047044E /* libFBSDKCoreKit.a in Frameworks */,
+				8251BFD723645F270047044E /* libFBSDKLoginKit.a in Frameworks */,
+				8251BFD923645F270047044E /* libFBSDKShareKit.a in Frameworks */,
 				081042932CF789843F171F30 /* libPods-Smooth.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +103,9 @@
 		66E85B82FEE01E0DC48FD424 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8251BFD423645F270047044E /* libFBSDKCoreKit.a */,
+				8251BFD623645F270047044E /* libFBSDKLoginKit.a */,
+				8251BFD823645F270047044E /* libFBSDKShareKit.a */,
 				07855E31435B67E845230999 /* libPods-Smooth.a */,
 			);
 			name = Frameworks;
@@ -195,6 +207,7 @@
 				8251BF902363DD3F0047044E /* Sources */,
 				8251BF912363DD3F0047044E /* Frameworks */,
 				8251BF922363DD3F0047044E /* Resources */,
+				620D13BC53BFD1BD4D56D606 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -332,6 +345,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		620D13BC53BFD1BD4D56D606 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smooth/Pods-Smooth-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smooth/Pods-Smooth-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smooth/Pods-Smooth-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

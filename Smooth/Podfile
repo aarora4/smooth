@@ -1,3 +1,9 @@
 target 'Smooth' do
+  use_modular_headers!
+
   pod 'Charts'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
+  pod 'FacebookShare'
 end
