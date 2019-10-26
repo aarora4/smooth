@@ -1,0 +1,6 @@
+module Pods_Smooth {
+  umbrella header "Pods-Smooth-umbrella.h"
+
+  export *
+  module * { export * }
+}

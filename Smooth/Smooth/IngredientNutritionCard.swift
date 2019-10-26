@@ -31,6 +31,7 @@ class IngredientNutritionCard: UIView {
     var carbohydrateValue: UILabel!
     var fatTitle: UILabel!
     var fatValue: UILabel!
+    var identifier: Int = 0
     
     
     func setupView() {
@@ -156,6 +157,10 @@ class IngredientNutritionCard: UIView {
         self.carbohydrateValue.text = carbVal
         self.fatValue.text = fatVal
         
+    }
+    
+    func setIdentifier(identifier: Int) {
+        self.identifier = identifier
     }
 
     /*

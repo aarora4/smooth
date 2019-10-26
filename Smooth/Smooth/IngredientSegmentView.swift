@@ -23,11 +23,13 @@ class IngredientSegmentView: UIView {
      
     var actionButton: UIButton!
     var nameLabel: UILabel!
-    
+    var selected: Bool = true
+    var identifier: Int = 0
+    var selectedColor: UIColor = UIColor.white
     
     func setupView() {
         
-        self.layer.cornerRadius = 20
+//        self.layer.cornerRadius = 20
         
         self.layer.backgroundColor = UIColor.white.cgColor
         
@@ -35,12 +37,12 @@ class IngredientSegmentView: UIView {
         self.nameLabel.center.x = self.frame.width / 2
         self.nameLabel.center.y = self.frame.height / 2
         nameLabel.text = "blueberries"
-        nameLabel.font = UIFont.systemFont(ofSize: 25, weight: .light)
+        nameLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
         nameLabel.textColor = UIColor.white
         nameLabel.numberOfLines = 0
         nameLabel.contentMode = .scaleToFill
         nameLabel.textAlignment = .center
-        nameLabel.alpha = 0
+//        nameLabel.alpha = 0
         
         self.addSubview(nameLabel)
         
@@ -53,8 +55,26 @@ class IngredientSegmentView: UIView {
         self.layer.backgroundColor = hex.cgColor
     }
     
+    func toggleSelected() {
+        
+        
+        if (selected) {
+            selected = false
+            nameLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
+            
+        } else {
+            selected = true
+            nameLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+            
+        }
+    }
+    
     func setTitle(text: String) {
         self.nameLabel.text = text
+    }
+    
+    func setIdentifier(identifier: Int) {
+        self.identifier = identifier
     }
 
     /*

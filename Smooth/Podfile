@@ -1,0 +1,3 @@
+target 'Smooth' do
+  pod 'Charts'
+end

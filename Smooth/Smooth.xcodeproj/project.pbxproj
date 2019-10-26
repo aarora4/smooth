@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081042932CF789843F171F30 /* libPods-Smooth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07855E31435B67E845230999 /* libPods-Smooth.a */; };
 		8251BF982363DD3F0047044E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8251BF972363DD3F0047044E /* AppDelegate.swift */; };
 		8251BF9A2363DD3F0047044E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8251BF992363DD3F0047044E /* SceneDelegate.swift */; };
 		8251BF9C2363DD3F0047044E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8251BF9B2363DD3F0047044E /* ViewController.swift */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07855E31435B67E845230999 /* libPods-Smooth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Smooth.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		690BBFAD9E7C08534CF1AB88 /* Pods-Smooth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smooth.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smooth/Pods-Smooth.release.xcconfig"; sourceTree = "<group>"; };
 		8251BF942363DD3F0047044E /* Smooth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smooth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8251BF972363DD3F0047044E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8251BF992363DD3F0047044E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 		8251BFCA2363DD690047044E /* SmoothieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothieView.swift; sourceTree = "<group>"; };
 		8251BFCC2363DDE00047044E /* IngredientSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSegmentView.swift; sourceTree = "<group>"; };
 		8251BFCE2363E05D0047044E /* IngredientNutritionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientNutritionCard.swift; sourceTree = "<group>"; };
+		C914E9982BF9BDB7E23AEC9D /* Pods-Smooth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smooth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smooth/Pods-Smooth.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081042932CF789843F171F30 /* libPods-Smooth.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66E85B82FEE01E0DC48FD424 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07855E31435B67E845230999 /* libPods-Smooth.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8251BF8B2363DD3F0047044E = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +104,8 @@
 				8251BFB02363DD400047044E /* SmoothTests */,
 				8251BFBB2363DD400047044E /* SmoothUITests */,
 				8251BF952363DD3F0047044E /* Products */,
+				D0D0E5612DFF8F3BA25B4E9D /* Pods */,
+				66E85B82FEE01E0DC48FD424 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +155,15 @@
 			path = SmoothUITests;
 			sourceTree = "<group>";
 		};
+		D0D0E5612DFF8F3BA25B4E9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C914E9982BF9BDB7E23AEC9D /* Pods-Smooth.debug.xcconfig */,
+				690BBFAD9E7C08534CF1AB88 /* Pods-Smooth.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +171,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8251BFC12363DD400047044E /* Build configuration list for PBXNativeTarget "Smooth" */;
 			buildPhases = (
+				4CAA094568BFDE77E5264EB9 /* [CP] Check Pods Manifest.lock */,
 				8251BF902363DD3F0047044E /* Sources */,
 				8251BF912363DD3F0047044E /* Frameworks */,
 				8251BF922363DD3F0047044E /* Resources */,
@@ -265,6 +290,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CAA094568BFDE77E5264EB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smooth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8251BF902363DD3F0047044E /* Sources */ = {
@@ -448,8 +498,9 @@
 		};
 		8251BFC22363DD400047044E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C914E9982BF9BDB7E23AEC9D /* Pods-Smooth.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YLNDKQ45VV;
 				INFOPLIST_FILE = Smooth/Info.plist;
@@ -466,8 +517,9 @@
 		};
 		8251BFC32363DD400047044E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 690BBFAD9E7C08534CF1AB88 /* Pods-Smooth.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YLNDKQ45VV;
 				INFOPLIST_FILE = Smooth/Info.plist;

@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
         self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
         smoothieView = SmoothieView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
