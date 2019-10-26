@@ -36,11 +36,11 @@ class SmoothieView: UIView, UIScrollViewDelegate {
 
     func setupView() {
         
-        smoothieNameLabel = UITextField(frame: CGRect(x: 0, y: 12, width: 200, height: 35))
+        smoothieNameLabel = UITextField(frame: CGRect(x: 0, y: 12, width: 300, height: 45))
         smoothieNameLabel.attributedPlaceholder = NSAttributedString(string: "My Smoothie",
-        attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
-        smoothieNameLabel.font = UIFont.systemFont(ofSize: 25, weight: .medium)
-        smoothieNameLabel.textColor = UIColor.black
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        smoothieNameLabel.font = UIFont.systemFont(ofSize: 35, weight: .semibold)
+        smoothieNameLabel.textColor = UIColor.darkGray
         
         smoothieNameLabel.contentMode = .scaleToFill
         smoothieNameLabel.textAlignment = .center
@@ -49,7 +49,7 @@ class SmoothieView: UIView, UIScrollViewDelegate {
         self.addSubview(smoothieNameLabel)
         
         
-        totalCalories = UILabel(frame: CGRect(x: 0, y: self.smoothieNameLabel.frame.origin.y + self.smoothieNameLabel.frame.height + 8, width: 200, height: 25))
+        totalCalories = UILabel(frame: CGRect(x: 0, y: self.smoothieNameLabel.frame.origin.y + self.smoothieNameLabel.frame.height + 2, width: 200, height: 25))
         totalCalories.text = "438 Calories"
         totalCalories.font = UIFont.systemFont(ofSize: 20, weight: .light)
         totalCalories.textColor = UIColor.gray

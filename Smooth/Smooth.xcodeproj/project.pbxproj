@@ -20,6 +20,7 @@
 		8251BFCB2363DD690047044E /* SmoothieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8251BFCA2363DD690047044E /* SmoothieView.swift */; };
 		8251BFCD2363DDE00047044E /* IngredientSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8251BFCC2363DDE00047044E /* IngredientSegmentView.swift */; };
 		8251BFCF2363E05D0047044E /* IngredientNutritionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8251BFCE2363E05D0047044E /* IngredientNutritionCard.swift */; };
+		8251BFD1236436320047044E /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8251BFD0236436320047044E /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		8251BFCA2363DD690047044E /* SmoothieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothieView.swift; sourceTree = "<group>"; };
 		8251BFCC2363DDE00047044E /* IngredientSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSegmentView.swift; sourceTree = "<group>"; };
 		8251BFCE2363E05D0047044E /* IngredientNutritionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientNutritionCard.swift; sourceTree = "<group>"; };
+		8251BFD0236436320047044E /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChartView.swift; path = /Users/avi/Desktop/Smooth/Smooth/Smooth/ChartView.swift; sourceTree = "<absolute>"; };
 		C914E9982BF9BDB7E23AEC9D /* Pods-Smooth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smooth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smooth/Pods-Smooth.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,12 +124,11 @@
 		8251BF962363DD3F0047044E /* Smooth */ = {
 			isa = PBXGroup;
 			children = (
+				8251BFD2236436450047044E /* Views */,
 				8251BF972363DD3F0047044E /* AppDelegate.swift */,
+				8251BFD32364366B0047044E /* Subviews */,
 				8251BF992363DD3F0047044E /* SceneDelegate.swift */,
 				8251BF9B2363DD3F0047044E /* ViewController.swift */,
-				8251BFCA2363DD690047044E /* SmoothieView.swift */,
-				8251BFCE2363E05D0047044E /* IngredientNutritionCard.swift */,
-				8251BFCC2363DDE00047044E /* IngredientSegmentView.swift */,
 				8251BF9D2363DD3F0047044E /* Main.storyboard */,
 				8251BFA32363DD400047044E /* Assets.xcassets */,
 				8251BFA52363DD400047044E /* LaunchScreen.storyboard */,
@@ -153,6 +154,25 @@
 				8251BFBE2363DD400047044E /* Info.plist */,
 			);
 			path = SmoothUITests;
+			sourceTree = "<group>";
+		};
+		8251BFD2236436450047044E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8251BFD0236436320047044E /* ChartView.swift */,
+				8251BFCA2363DD690047044E /* SmoothieView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8251BFD32364366B0047044E /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				8251BFCE2363E05D0047044E /* IngredientNutritionCard.swift */,
+				8251BFCC2363DDE00047044E /* IngredientSegmentView.swift */,
+			);
+			name = Subviews;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D0D0E5612DFF8F3BA25B4E9D /* Pods */ = {
@@ -328,6 +348,7 @@
 				8251BF982363DD3F0047044E /* AppDelegate.swift in Sources */,
 				8251BF9A2363DD3F0047044E /* SceneDelegate.swift in Sources */,
 				8251BFCD2363DDE00047044E /* IngredientSegmentView.swift in Sources */,
+				8251BFD1236436320047044E /* ChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
