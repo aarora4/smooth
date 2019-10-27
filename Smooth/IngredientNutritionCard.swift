@@ -54,7 +54,7 @@ class IngredientNutritionCard: UIView {
         self.addSubview(nameLabel)
         
         self.weightLabel = UILabel(frame: CGRect(x: self.frame.width - 12 - 100, y: 8, width: 100, height: 30))
-        weightLabel.text = "37g"
+        weightLabel.text = "10.0g"
         weightLabel.font = UIFont.systemFont(ofSize: 25, weight: .medium)
         weightLabel.textColor = UIColor.darkGray
         weightLabel.numberOfLines = 0
@@ -163,6 +163,9 @@ class IngredientNutritionCard: UIView {
         self.identifier = identifier
     }
 
+    func setWeight(weight: String) {
+        self.weightLabel.text = "\(weight)g"
+    }
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

@@ -7,12 +7,14 @@
 
 import UIKit
 import Charts
+import Alamofire
 
 class ChartView: UIViewController {
     
     var titleLabel: UILabel!
     var exitButton: UIButton!
     var ingredients: [String] = []
+    
     var pieChartView: PieChartView!
     var smoothieName: String = ""
     
@@ -27,6 +29,8 @@ class ChartView: UIViewController {
     var sodiumValue: UILabel!
     var fiberValue: UILabel!
     var sugarValue: UILabel!
+    var food: [String] = ["milk", "almonds", "banana", "whey"]
+    var percentages: [Double] = [40.0, 10.0, 30.0, 20.0]
     
     
     override func viewDidLoad() {
@@ -44,13 +48,10 @@ class ChartView: UIViewController {
         self.view.addSubview(titleLabel)
         
         
-        let foods = ["milk", "almonds", "banana", "whey"]
-        let percentages = [40.0, 10.0, 30.0, 20.0]
-        
         
         pieChartView = PieChartView(frame: CGRect(x: 0, y: 67, width: self.view.frame.width - 40, height: self.view.frame.width - 40))
         pieChartView.center.x = self.view.frame.width / 2
-        setChart(dataPoints: foods, values: percentages)
+        setChart(dataPoints: self.food, values: self.percentages)
         
         self.view.addSubview(pieChartView)
         
@@ -61,30 +62,35 @@ class ChartView: UIViewController {
         exitButton.tintColor = UIColor(red:0.91, green:0.52, blue:0.52, alpha:1.0)
         self.view.addSubview(exitButton)
         exitButton.addTarget(self, action: #selector(toMainViewController), for: .touchUpInside)
+
+
+        let foodName = "bagel"
+        let appId = "128a0b75"
+        let appKey = "b16ca21134c4da32cf34b2b4069be6bf"
         
-        let headers = [
-            "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-            "x-rapidapi-key": "SIGN-UP-FOR-KEY"
+        let url = "https://trackapi.nutritionix.com/v2/natural/nutrients"
+        
+        let headers: HTTPHeaders = [
+            "x-app-id": "128a0b75",
+            "x-app-key": "b16ca21134c4da32cf34b2b4069be6bf",
+            "x-remote-user-id": "0",
+            "Content-Type": "application/json"
         ]
+        
+        
+        AF.request(url, method: .post, parameters: ["query":"1 cup chicken noodle soup"],encoding: JSONEncoding.default, headers: headers).responseJSON {
+        response in
+          switch response.result {
+                        case .success:
+                            print(response)
 
-        let request = NSMutableURLRequest(url: NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/quickAnswer?q=How%20much%20vitamin%20c%20is%20in%202%20apples%3F")! as URL,
-                                                cachePolicy: .useProtocolCachePolicy,
-                                            timeoutInterval: 10.0)
-        request.httpMethod = "GET"
-        request.allHTTPHeaderFields = headers
+                            break
+                        case .failure(let error):
 
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-            if (error != nil) {
-                print(error)
-            } else {
-                let httpResponse = response as? HTTPURLResponse
-                print(httpResponse)
-                
-            }
-        })
-
-        dataTask.resume()
+                            print(error)
+                        }
+        }
+        
         
         var backgroundColor = UIView(frame: CGRect(x: 0, y: self.pieChartView.frame.origin.y + self.pieChartView.frame.height + 16, width: self.view.frame.width, height: self.view.frame.height - self.pieChartView.frame.height - titleLabel.frame.height))
         backgroundColor.backgroundColor = UIColor(red:0.91, green:0.52, blue:0.52, alpha:1.0)

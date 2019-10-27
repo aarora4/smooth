@@ -6,4 +6,6 @@ target 'Smooth' do
   pod 'FBSDKLoginKit'
   pod 'FBSDKShareKit'
   pod 'FacebookShare'
+  pod 'Alamofire', '~> 5.0.0-rc.2'
+  pod 'SwiftyJSON', '~> 4.0'
 end

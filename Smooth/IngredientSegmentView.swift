@@ -26,6 +26,7 @@ class IngredientSegmentView: UIView {
     var selected: Bool = true
     var identifier: Int = 0
     var selectedColor: UIColor = UIColor.white
+    var weight: Double!
     
     func setupView() {
         
@@ -75,6 +76,10 @@ class IngredientSegmentView: UIView {
     
     func setIdentifier(identifier: Int) {
         self.identifier = identifier
+    }
+    
+    func setWeight(grams: Double) {
+        weight = grams
     }
 
     /*

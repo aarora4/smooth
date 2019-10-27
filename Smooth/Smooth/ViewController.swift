@@ -30,6 +30,19 @@ class ViewController: UIViewController, SharingDelegate {
         let chartView = ChartView()
         chartView.modalPresentationStyle = .fullScreen
         chartView.setSmoothieName(name: smoothieView.smoothieNameLabel.text ?? "")
+        var food:[String] = []
+        var percentages:[Double] = []
+        
+        for i in 0 ..< self.smoothieView.ingredients.count {
+            var percentage = self.smoothieView.ingredients[i].weight / self.smoothieView.totalWeightGrams
+            percentages.append(percentage)
+            food.append(self.smoothieView.ingredients[i].nameLabel.text!)
+        }
+        
+        chartView.food = food
+        chartView.percentages = percentages
+        
+        
         self.present(chartView, animated: true, completion: nil)
     }
     
